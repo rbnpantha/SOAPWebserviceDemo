@@ -1,0 +1,25 @@
+package com.rbn.soapdemo.webservice;
+
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebResult;
+import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
+import javax.jws.soap.SOAPBinding.Style;
+
+@WebService
+@SOAPBinding(style = Style.RPC) // default is DOCUMENT (recommended coz validation features can be added in DOCUMENT)
+public class ShopInfo {
+
+	@WebMethod
+	@WebResult(partName = "lookupOutput")
+	public String getShopInfo(@WebParam(partName = "lookupInput") String property) {
+		String response = "Invalid Property";
+		if ("shopName".equals(property)) {
+			response = "Mero Shop";
+		} else if ("since".equals(property)) {
+			response = "since 2017";
+		}
+		return response;
+	}
+}
