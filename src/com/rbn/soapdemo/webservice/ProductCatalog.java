@@ -9,7 +9,7 @@ import com.rbn.soapdemo.sei.ProductCatalogInterface;
 import com.rbn.soapdemo.service.ProductService;
 import com.rbn.soapdemo.serviceImpl.ProductServiceImpl;
 
-@WebService(endpointInterface = "com.rbn.soapdemo.sei.ProductCatalogInterface")
+@WebService(endpointInterface = "com.rbn.soapdemo.sei.ProductCatalogInterface", portName = "MeroShopCatalogPort", serviceName = "MeroShopCatalogService")
 public class ProductCatalog implements ProductCatalogInterface {
 
 	ProductService productService = new ProductServiceImpl();
