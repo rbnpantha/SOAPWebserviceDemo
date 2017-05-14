@@ -1,6 +1,6 @@
 # SOAPWebserviceDemo
 
-Tesing SOAP Webservices
+Testing SOAP Webservices
 
 =>  Used glassfish admin console http://localhost:4848 for testing and to view the SEI service end points.
 
